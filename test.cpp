@@ -16,8 +16,6 @@ void wyswietl_powitanie(string& imie, string& wiek)
     cout << "\n\nWitaj " << imie << "! Twoj wiek to: " << wiek_liczba << " lat.\n\n";
 }
 
-// Testing some git functionality
-
 int main()
 {
     string imie;
