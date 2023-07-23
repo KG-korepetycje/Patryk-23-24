@@ -39,7 +39,7 @@ int main()
     int n;
     cout << "Podaj liczbe n do obliczenia n!: ";
     cin >> n;
-    cout << n << "! = " << silnia(n) << endl;
+    cout << n << "! = " << silnia(n) << "\n\n";
 
     return 0;
 }
