@@ -1,10 +1,20 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 
 int zmien_typ_wieku(string& wiek)
 {
-    int wiek_liczba = stoi(wiek);
+    int wiek_liczba = 0;
+    int mnoznik = 1;
+    int wskaznik = wiek.length() - 1;
+
+    while (wskaznik >=0 )
+    {
+        wiek_liczba += ((wiek[wskaznik] - 48) * mnoznik);
+        
+        wskaznik--;
+        mnoznik = mnoznik * 10;
+    }
 
     return wiek_liczba;
 }
