@@ -4,7 +4,7 @@ using namespace std;
 
 int n;
 string s;
-stack <int> stos;
+stack <char> stos;
 
 
 
@@ -38,16 +38,20 @@ bool czypoprawne_trudne(string s, int n)
         // Przypadek, gdy trafiamy na nawias otwierajacy okragly
         if (s[i]=='(')
             stos.push('(');
-        
-        // Przypadek, gdy trafiamy na nawias otwierajacy kwadratowy
-        if (s[i]=='[')
-            stos.push('[');
-
-        // Przypadek, gdy mamy nawias zamykajacy i cos jest na stosie
         else
         {
-            if ((stos.top()=='(' && s[i]==')') || (stos.top()=='[' && s[i]==']'))
-                stos.pop();
+            // Przypadek, gdy trafiamy na nawias otwierajacy kwadratowy
+            if (s[i]=='[')
+                stos.push('[');
+
+            // Przypadek, gdy mamy nawias zamykajacy i cos jest na stosie
+            else
+            {
+                if ((stos.top()=='(' && s[i]==')') || (stos.top()=='[' && s[i]==']'))
+                    stos.pop();
+                else
+                    return false;
+            }
         }
     }
 
