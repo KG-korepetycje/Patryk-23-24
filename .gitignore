@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+#json settings
+*.json
+
+#przyklad file
+przyklad.cpp
