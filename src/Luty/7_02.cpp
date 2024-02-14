@@ -41,6 +41,7 @@ int main()
     chrono::steady_clock::time_point begin = chrono::steady_clock::now();
     rozklad(n);
     chrono::steady_clock::time_point end = chrono::steady_clock::now();
+    cout << "Time difference = " << chrono::duration_cast<chrono::seconds>(end - begin).count() << "[s]" << endl;
     cout << "Time difference = " << chrono::duration_cast<chrono::microseconds>(end - begin).count() << "[micro s]" << endl;
     cout << "Time difference = " << chrono::duration_cast<chrono::nanoseconds> (end - begin).count() << "[ns]" << endl;
 
@@ -48,6 +49,7 @@ int main()
     begin = chrono::steady_clock::now();
     rozklad_lepszy(n);
     end = chrono::steady_clock::now();
+    cout << "Time difference = " << chrono::duration_cast<chrono::seconds>(end - begin).count() << "[s]" << endl;
     cout << "Time difference = " << chrono::duration_cast<chrono::microseconds>(end - begin).count() << "[micro s]" << endl;
     cout << "Time difference = " << chrono::duration_cast<chrono::nanoseconds> (end - begin).count() << "[ns]" << endl;
 
